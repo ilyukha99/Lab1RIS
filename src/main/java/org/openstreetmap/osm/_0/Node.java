@@ -8,7 +8,6 @@
 
 package org.openstreetmap.osm._0;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -58,24 +57,24 @@ public class Node {
     protected List<org.openstreetmap.osm._0.Tag> tag;
     @XmlAttribute(name = "id")
     @XmlSchemaType(name = "unsignedLong")
-    protected BigInteger id;
+    protected long id;
     @XmlAttribute(name = "lat")
     protected Double lat;
     @XmlAttribute(name = "lon")
     protected Double lon;
     @XmlAttribute(name = "user")
-    protected String user;
+    protected String userName;
     @XmlAttribute(name = "uid")
     @XmlSchemaType(name = "unsignedLong")
-    protected BigInteger uid;
+    protected long uid;
     @XmlAttribute(name = "visible")
-    protected Boolean visible;
+    protected Boolean visible = true;
     @XmlAttribute(name = "version")
     @XmlSchemaType(name = "unsignedLong")
-    protected BigInteger version;
+    protected long version;
     @XmlAttribute(name = "changeset")
     @XmlSchemaType(name = "unsignedLong")
-    protected BigInteger changeset;
+    protected long changeSet;
     @XmlAttribute(name = "timestamp")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar timestamp;
@@ -114,10 +113,10 @@ public class Node {
      * 
      * @return
      *     possible object is
-     *     {@link BigInteger }
+     *     {@link long }
      *     
      */
-    public BigInteger getId() {
+    public long getId() {
         return id;
     }
 
@@ -126,10 +125,10 @@ public class Node {
      * 
      * @param value
      *     allowed object is
-     *     {@link BigInteger }
+     *     {@link long }
      *     
      */
-    public void setId(BigInteger value) {
+    public void setId(long value) {
         this.id = value;
     }
 
@@ -189,8 +188,8 @@ public class Node {
      *     {@link String }
      *     
      */
-    public String getUser() {
-        return user;
+    public String getUserName() {
+        return userName;
     }
 
     /**
@@ -201,8 +200,8 @@ public class Node {
      *     {@link String }
      *     
      */
-    public void setUser(String value) {
-        this.user = value;
+    public void setUserName(String value) {
+        this.userName = value;
     }
 
     /**
@@ -210,10 +209,10 @@ public class Node {
      * 
      * @return
      *     possible object is
-     *     {@link BigInteger }
+     *     {@link long }
      *     
      */
-    public BigInteger getUid() {
+    public long getUid() {
         return uid;
     }
 
@@ -222,10 +221,10 @@ public class Node {
      * 
      * @param value
      *     allowed object is
-     *     {@link BigInteger }
+     *     {@link long }
      *     
      */
-    public void setUid(BigInteger value) {
+    public void setUid(long value) {
         this.uid = value;
     }
 
@@ -258,10 +257,10 @@ public class Node {
      * 
      * @return
      *     possible object is
-     *     {@link BigInteger }
+     *     {@link long }
      *     
      */
-    public BigInteger getVersion() {
+    public long getVersion() {
         return version;
     }
 
@@ -270,10 +269,10 @@ public class Node {
      * 
      * @param value
      *     allowed object is
-     *     {@link BigInteger }
+     *     {@link long }
      *     
      */
-    public void setVersion(BigInteger value) {
+    public void setVersion(long value) {
         this.version = value;
     }
 
@@ -282,11 +281,11 @@ public class Node {
      * 
      * @return
      *     possible object is
-     *     {@link BigInteger }
+     *     {@link long }
      *     
      */
-    public BigInteger getChangeset() {
-        return changeset;
+    public long getChangeSet() {
+        return changeSet;
     }
 
     /**
@@ -294,11 +293,11 @@ public class Node {
      * 
      * @param value
      *     allowed object is
-     *     {@link BigInteger }
+     *     {@link long }
      *     
      */
-    public void setChangeset(BigInteger value) {
-        this.changeset = value;
+    public void setChangeSet(long value) {
+        this.changeSet = value;
     }
 
     /**
@@ -323,5 +322,18 @@ public class Node {
      */
     public void setTimestamp(XMLGregorianCalendar value) {
         this.timestamp = value;
+    }
+
+    @Override
+    public String toString() {
+        return id + ", " +
+                lat + ", " +
+                lon + ", '" +
+                userName + "', " +
+                uid + ", " +
+                visible + ", " +
+                version + ", " +
+                changeSet + ", " +
+                "to_timestamp('" + timestamp + "', 'yyyy-mm-ddThh24:mi:ssZ')";
     }
 }

@@ -18,7 +18,7 @@
         </encoder>
     </appender>
 
-    <logger name="MainApplicationService" level="info" additivity="false">
+    <logger name="MainLogger" level="info" additivity="false">
         <appender-ref ref="CONSOLE"/>
     </logger>
 
