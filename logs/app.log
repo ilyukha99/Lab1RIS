@@ -1,0 +1,9 @@
+2022-04-09 12:52:11,069 INFO MainLogger [main] Estimated time of BATCH: 109,0637248380 sec
+2022-04-09 13:06:02,505 INFO MainLogger [main] Estimated time of BATCH: 111,1649477340 sec
+2022-04-09 13:09:59,274 INFO MainLogger [main] Estimated time of BATCH: 108,5435101450 sec
+2022-04-09 14:26:36,307 INFO MainLogger [main] Estimated time of PREPARED_STATEMENT: 1354,8221959050 sec
+2022-04-09 14:53:17,301 INFO MainLogger [main] Estimated time of PREPARED_STATEMENT: 1345,9336353610 sec
+2022-04-09 16:28:02,018 INFO MainLogger [main] Estimated time of STATEMENT: 1590,7017043400 sec
+2022-04-09 16:32:03,302 INFO MainLogger [main] Estimated time of BATCH: 110,4167223660 sec
+2022-04-09 16:38:24,866 INFO MainLogger [main] Estimated time of BATCH: 108,3809848130 sec
+2022-04-09 17:09:22,919 INFO MainLogger [main] Estimated time of STATEMENT: 1610,4691831020 sec

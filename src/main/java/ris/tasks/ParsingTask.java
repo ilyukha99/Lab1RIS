@@ -7,10 +7,11 @@ import org.apache.commons.cli.ParseException;
 import org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream;
 import org.apache.commons.compress.utils.IOUtils;
 import ris.parsers.XMLParser;
-
 import javax.xml.bind.JAXBException;
 import javax.xml.stream.XMLStreamException;
 import java.io.*;
+
+import static ris.db.info.DBMode.*;
 
 public class ParsingTask {
     public void execute(String[] args) {
@@ -40,9 +41,9 @@ public class ParsingTask {
                 try (InputStream decompressedInputStream = new BZip2CompressorInputStream(new BufferedInputStream(
                         new FileInputStream(filePath), bufferSize))) {
 
-                    long nanos = new XMLParser().parseXML(decompressedInputStream, false);
+                    long nanos = new XMLParser().parseXML(decompressedInputStream, true, STATEMENT);
 
-                    System.out.println("Approximate time of parsing XML-file: " +
+                    System.out.println("Approximate time of execution: " +
                             nanos / 1_000_000_000d + " sec, size of buffer = " + bufferSize + "\n");
                 }
             }

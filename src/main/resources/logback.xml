@@ -10,20 +10,19 @@
     </appender>
 
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-        <file>${HOME_LOG}</file>
+        <file>logs/app.log</file>
         <append>true</append>
-        <immediateFlush>false</immediateFlush>
+        <immediateFlush>true</immediateFlush>
         <encoder>
             <pattern>%d %p %c{1.} [%t] %m%n</pattern>
         </encoder>
     </appender>
 
-    <logger name="MainLogger" level="info" additivity="false">
-        <appender-ref ref="CONSOLE"/>
+    <logger name="MainLogger" level="info" appendable="true">
+        <appender-ref ref="FILE"/>
     </logger>
 
     <root level="error">
-        <appender-ref ref="FILE"/>
         <appender-ref ref="CONSOLE"/>
     </root>
 </configuration>

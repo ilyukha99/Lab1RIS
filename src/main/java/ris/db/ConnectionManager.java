@@ -11,7 +11,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-import static ris.db.PropertyContainer.*;
+import static ris.db.info.PropertyContainer.*;
 
 public class ConnectionManager {
     private static final Logger LOGGER = LoggerFactory.getLogger("MainLogger");
@@ -37,7 +37,7 @@ public class ConnectionManager {
                     properties.getProperty(PASSWORD_PROPERTY));
 
                 if (connection != null) {
-                    LOGGER.info("Connection made");
+                    //LOGGER.debug("Connection made");
                     connection.setAutoCommit(false);
                     return connection;
                 }

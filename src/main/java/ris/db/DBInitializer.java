@@ -12,7 +12,7 @@ public class DBInitializer {
                     "timeStamp timestamp not null);";
 
     private static final String CREATE_TAG_TABLE =
-            "CREATE TABLE IF NOT EXISTS tags(id serial primary key, k text not null, " +
+            "CREATE TABLE IF NOT EXISTS tags(id bigserial primary key, k text not null, " +
                     "v text not null, nodeId bigint references nodes(id));";
 
     private final Connection connection;

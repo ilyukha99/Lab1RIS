@@ -1,7 +1,7 @@
 package ris.db.exceptions;
 
-public class ConnectionEstablishException extends RuntimeException {
-    public ConnectionEstablishException(String exception) {
-        super(exception);
+public class ConnectionEstablishException extends CustomRuntimeException {
+    public ConnectionEstablishException(String message) {
+        super(message);
     }
 }

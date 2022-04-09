@@ -101,7 +101,7 @@ public class Node {
      * 
      * 
      */
-    public List<Tag> getTag() {
+    public List<Tag> getTags() {
         if (tag == null) {
             tag = new ArrayList<Tag>();
         }

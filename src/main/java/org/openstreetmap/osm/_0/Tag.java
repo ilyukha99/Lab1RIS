@@ -91,4 +91,8 @@ public class Tag {
         this.v = value;
     }
 
+    @Override
+    public String toString() {
+        return "'" + k + "', '" + v + "'";
+    }
 }
